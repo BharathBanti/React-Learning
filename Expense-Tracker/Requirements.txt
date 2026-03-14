@@ -1,0 +1,16 @@
+
+
+Project Features and Functionalities:
+
+1. Add Expense
+2. Display expense list
+3. Delete button
+4. Empty State UI
+5. Total Expense
+6. Category wise Total
+7. Expense Count
+8. Filter by Category
+9. Sort by
+10. Show filtered expenses list
+11. Prevent empty state form submitting
+12. Delete all button 
