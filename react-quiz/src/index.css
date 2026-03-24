@@ -1,11 +1,15 @@
 :root {
-  --color-darkest: #343a40;
-  --color-dark: #495057;
-  --color-medium: #ced4da;
-  --color-light: #f1f3f5;
-
-  --color-theme: #1098ad;
-  --color-accent: #ffa94d;
+  --color-bg: #0f172a;
+  --color-surface: #111c44;
+  --color-surface-soft: #1b2a5b;
+  --color-border: #32457a;
+  --color-text: #eff6ff;
+  --color-muted: #b8c7ea;
+  --color-theme: #22c55e;
+  --color-theme-dark: #16a34a;
+  --color-accent: #f59e0b;
+  --color-danger: #f97316;
+  --shadow-soft: 0 18px 50px rgba(3, 10, 28, 0.35);
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Codystar&display=swap");
@@ -24,8 +28,10 @@ html {
 
 body {
   min-height: 100vh;
-  color: var(--color-light);
-  background-color: var(--color-darkest);
+  color: var(--color-text);
+  background:
+    radial-gradient(circle at top, rgba(34, 197, 94, 0.18), transparent 30%),
+    linear-gradient(180deg, #081122 0%, var(--color-bg) 45%, #050816 100%);
   padding: 3.2rem;
 }
 
@@ -38,6 +44,12 @@ body {
 
 .main {
   width: 50rem;
+  background: rgba(17, 28, 68, 0.84);
+  border: 1px solid rgba(184, 199, 234, 0.12);
+  border-radius: 3.2rem;
+  padding: 3.2rem;
+  box-shadow: var(--shadow-soft);
+  backdrop-filter: blur(10px);
 }
 
 .app-header {
@@ -53,12 +65,15 @@ body {
   font-size: 1.6rem;
   font-weight: 500;
   padding: 2rem;
-  background-color: #495057;
-  border-radius: 100px;
+  background-color: rgba(249, 115, 22, 0.14);
+  border: 1px solid rgba(249, 115, 22, 0.35);
+  color: #ffd9c2;
+  border-radius: 1.8rem;
 }
 
 img {
   width: 14rem;
+  filter: drop-shadow(0 10px 24px rgba(34, 197, 94, 0.18));
 }
 
 h1 {
@@ -96,7 +111,7 @@ h4 {
   gap: 1.2rem;
   grid-template-columns: auto auto;
   font-size: 1.8rem;
-  color: var(--color-medium);
+  color: var(--color-muted);
 }
 
 progress {
@@ -107,29 +122,33 @@ progress {
 }
 
 ::-webkit-progress-bar {
-  background-color: var(--color-medium);
+  background-color: rgba(184, 199, 234, 0.14);
   border-radius: 100px;
 }
 ::-webkit-progress-value {
-  background-color: var(--color-theme);
+  background: linear-gradient(90deg, var(--color-theme), #34d399);
   border-radius: 100px;
 }
 
 .btn {
   display: block;
   font-family: inherit;
-  color: inherit;
+  color: var(--color-text);
   font-size: 2rem;
-  border: 2px solid var(--color-dark);
-  background-color: var(--color-dark);
+  border: 1px solid var(--color-border);
+  background-color: var(--color-surface-soft);
   padding: 1.2rem 2.4rem;
   cursor: pointer;
-  border-radius: 100px;
-  transition: 0.3s;
+  border-radius: 1.6rem;
+  transition: transform 0.25s, background-color 0.25s, border-color 0.25s,
+    box-shadow 0.25s;
 }
 
 .btn:not([disabled]):hover {
-  background-color: var(--color-darkest);
+  background-color: #243872;
+  border-color: #4461a6;
+  transform: translateY(-1px);
+  box-shadow: 0 12px 30px rgba(2, 8, 23, 0.24);
 }
 
 .btn-option:not([disabled]):hover {
@@ -141,7 +160,10 @@ progress {
 }
 
 .btn-ui {
-  float: right;
+  min-width: 12rem;
+  justify-self: end;
+  background: linear-gradient(135deg, var(--color-theme), var(--color-theme-dark));
+  border-color: transparent;
 }
 
 .options {
@@ -157,34 +179,39 @@ progress {
 }
 
 .btn-option.correct {
-  background-color: var(--color-theme);
-  border: 2px solid var(--color-theme);
-  color: var(--color-light);
+  background: linear-gradient(135deg, var(--color-theme), var(--color-theme-dark));
+  border: 1px solid transparent;
+  color: var(--color-text);
 }
 .btn-option.wrong {
-  background-color: var(--color-accent);
-  border: 2px solid var(--color-accent);
-  color: var(--color-darkest);
+  background: rgba(245, 158, 11, 0.2);
+  border: 1px solid rgba(245, 158, 11, 0.42);
+  color: #ffe7bf;
 }
 
 .answer {
   transform: translateX(2rem);
+  border-color: #6f8fda;
+  background-color: #223468;
 }
 
 .result {
-  background-color: var(--color-theme);
-  color: var(--color-light);
-  border-radius: 100px;
+  background:
+    linear-gradient(160deg, rgba(34, 197, 94, 0.18), rgba(17, 28, 68, 0.9)),
+    var(--color-surface);
+  color: var(--color-text);
+  border: 1px solid rgba(34, 197, 94, 0.3);
+  border-radius: 2.4rem;
   text-align: center;
-  padding: 2rem 0;
+  padding: 3.2rem 2.4rem;
   font-size: 2rem;
   font-weight: 500;
-  margin-bottom: 1.6rem;
+  display: grid;
+  gap: 1.8rem;
 }
 
-.result span {
-  font-size: 2.2rem;
-  margin-right: 4px;
+.result-copy {
+  line-height: 1.6;
 }
 
 .highscore {
@@ -200,17 +227,33 @@ progress {
   margin-top: 4rem;
   gap: 1.6rem;
 
-  color: var(--color-medium);
+  color: var(--color-muted);
   font-size: 1.4rem;
 }
 
+.quiz-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.6rem;
+}
+
 .timer {
-  float: left;
   font-size: 1.8rem;
-  color: var(--color-medium);
-  border: 2px solid var(--color-dark);
-  padding: 1.35rem 2.8rem;
-  border-radius: 100px;
+  color: var(--color-text);
+  border: 1px solid rgba(34, 197, 94, 0.28);
+  background: rgba(34, 197, 94, 0.12);
+  padding: 1.35rem 2.2rem;
+  border-radius: 1.6rem;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+}
+
+.btn-restart {
+  margin: 0 auto;
+  background: transparent;
+  border-color: rgba(184, 199, 234, 0.35);
+  min-width: 18rem;
 }
 
 /* CREDIT: https://dev.to/afif/i-made-100-css-loaders-for-your-next-project-4eje */
@@ -256,4 +299,35 @@ progress {
 .counter * {
   font-size: inherit;
   padding: 0.8rem;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 2rem;
+  }
+
+  .app-header,
+  .main {
+    width: 100%;
+  }
+
+  .app-header {
+    flex-direction: column;
+    gap: 1.8rem;
+    text-align: center;
+  }
+
+  .main {
+    padding: 2.4rem;
+  }
+
+  .quiz-actions {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .btn-ui,
+  .btn-restart {
+    width: 100%;
+  }
 }
