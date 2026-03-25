@@ -1,0 +1,14 @@
+.nav{
+  font-size: 2.3rem;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.nav ul{
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav :global(.active){
+  background-color: green;
+}
