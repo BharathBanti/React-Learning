@@ -1,0 +1,36 @@
+.user {
+  position: absolute;
+  top: 4.2rem;
+  right: 4.2rem;
+  background: rgba(29, 40, 45, 0.9);
+  padding: 1rem 1.4rem;
+  border-radius: 2rem;
+  z-index: 999;
+  box-shadow: 0 1.4rem 3rem rgba(0, 0, 0, 0.24);
+  font-size: 1.6rem;
+  font-weight: 600;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+
+  display: flex;
+  align-items: center;
+  gap: 1.6rem;
+}
+
+.user img {
+  border-radius: 100px;
+  height: 4rem;
+  border: 2px solid rgba(255, 255, 255, 0.16);
+}
+
+.user button {
+  background-color: rgba(255, 255, 255, 0.08);
+  border-radius: 999px;
+  border: none;
+  padding: 0.6rem 1.2rem;
+  color: inherit;
+  font-family: inherit;
+  font-size: 1.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  cursor: pointer;
+}

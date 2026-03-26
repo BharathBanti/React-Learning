@@ -6,13 +6,14 @@
 :root {
   --color-brand--1: #ffb545;
   --color-brand--2: #00c46a;
+  --color-brand--3: #54b9ff;
 
-  --color-dark--0: #242a2e;
-  --color-dark--1: #2d3439;
-  --color-dark--2: #42484d;
-  --color-light--1: #aaa;
-  --color-light--2: #ececec;
-  --color-light--3: #d6dee0;
+  --color-dark--0: #1f272b;
+  --color-dark--1: #293439;
+  --color-dark--2: #3a464b;
+  --color-light--1: #aebdc2;
+  --color-light--2: #edf3f5;
+  --color-light--3: #d8e2e5;
 }
 
 * {
@@ -24,6 +25,7 @@
 html {
   font-size: 62.5%;
   box-sizing: border-box;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -31,6 +33,22 @@ body {
   color: var(--color-light--2);
   font-weight: 400;
   line-height: 1.6;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #121a1e 0%, #0d1418 100%);
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+#root {
+  min-height: 100vh;
 }
 
 label {
@@ -41,31 +59,43 @@ label {
 input,
 textarea {
   width: 100%;
-  padding: 0.8rem 1.2rem;
+  padding: 1.2rem 1.4rem;
   font-family: inherit;
   font-size: 1.6rem;
-  border: none;
-  border-radius: 5px;
-  background-color: var(--color-light--3);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 1.6rem;
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--color-light--2);
   transition: all 0.2s;
 }
 
-input:focus {
+input:focus,
+textarea:focus {
   outline: none;
-  background-color: #fff;
+  border-color: rgba(0, 196, 106, 0.34);
+  background: rgba(255, 255, 255, 0.09);
+  box-shadow: 0 0 0 0.4rem rgba(0, 196, 106, 0.08);
 }
 
 .cta:link,
 .cta:visited {
   display: inline-block;
-  background-color: var(--color-brand--2);
-  color: var(--color-dark--1);
+  background: linear-gradient(135deg, var(--color-brand--2), #1fe58b);
+  color: #102019;
   text-transform: uppercase;
   text-decoration: none;
-  font-size: 1.6rem;
-  font-weight: 600;
-  padding: 1rem 3rem;
-  border-radius: 5px;
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  padding: 1.3rem 2.6rem;
+  border-radius: 999px;
+  box-shadow: 0 1.2rem 2.6rem rgba(0, 196, 106, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.cta:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 1.6rem 3rem rgba(0, 196, 106, 0.24);
 }
 
 /*

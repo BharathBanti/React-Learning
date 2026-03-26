@@ -1,0 +1,6 @@
+.logo {
+  width: 20rem;
+  height: auto;
+  display: block;
+  filter: drop-shadow(0 1.2rem 2rem rgba(0, 0, 0, 0.24));
+}
