@@ -3,8 +3,7 @@ import { NavLink } from 'react-router-dom';
 function Post({ post }) {
   return (
     <NavLink to={`/rq-posts/${post.id}`}>
-      <div className="post-item">
-        <p>{post.id}</p>
+      <div className="post-item" >
         <h3 className="post-title">{post.title}</h3>
         <p className="post-body">{post.content}</p>
       </div>

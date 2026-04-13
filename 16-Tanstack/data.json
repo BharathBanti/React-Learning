@@ -14,43 +14,248 @@
       "id": "post_003",
       "title": "JavaScript Practice",
       "content": "Solved several problems using arrays and loops today."
-    },
-    {
-      "id": "post_004",
-      "title": "CSS Styling",
-      "content": "Explored Flexbox and Grid for building responsive layouts."
-    },
-    {
-      "id": "post_005",
-      "title": "Backend Learning",
-      "content": "Started learning Node.js and Express for server-side development."
-    },
-    {
-      "id": "post_006",
-      "title": "Project Building",
-      "content": "Working on my first full-stack project, feeling excited!"
     }
   ],
   "fruits": [
-    { "id": "fruit_001", "name": "Apple" },
-    { "id": "fruit_002", "name": "Banana" },
-    { "id": "fruit_003", "name": "Mango" },
-    { "id": "fruit_004", "name": "Orange" },
-    { "id": "fruit_005", "name": "Pineapple" },
-    { "id": "fruit_006", "name": "Grapes" },
-    { "id": "fruit_007", "name": "Strawberry" },
-    { "id": "fruit_008", "name": "Watermelon" },
-    { "id": "fruit_009", "name": "Papaya" },
-    { "id": "fruit_010", "name": "Kiwi" },
-    { "id": "fruit_011", "name": "Guava" },
-    { "id": "fruit_012", "name": "Pomegranate" },
-    { "id": "fruit_013", "name": "Cherry" },
-    { "id": "fruit_014", "name": "Peach" },
-    { "id": "fruit_015", "name": "Plum" },
-    { "id": "fruit_016", "name": "Lychee" },
-    { "id": "fruit_017", "name": "Dragon Fruit" },
-    { "id": "fruit_018", "name": "Jackfruit" },
-    { "id": "fruit_019", "name": "Blueberry" },
-    { "id": "fruit_020", "name": "Avocado" }
+    {
+      "id": "fruit_001",
+      "name": "Apple"
+    },
+    {
+      "id": "fruit_002",
+      "name": "Banana"
+    },
+    {
+      "id": "fruit_003",
+      "name": "Mango"
+    },
+    {
+      "id": "fruit_004",
+      "name": "Orange"
+    },
+    {
+      "id": "fruit_005",
+      "name": "Pineapple"
+    },
+    {
+      "id": "fruit_006",
+      "name": "Grapes"
+    },
+    {
+      "id": "fruit_007",
+      "name": "Strawberry"
+    },
+    {
+      "id": "fruit_008",
+      "name": "Watermelon"
+    },
+    {
+      "id": "fruit_009",
+      "name": "Papaya"
+    },
+    {
+      "id": "fruit_010",
+      "name": "Kiwi"
+    },
+    {
+      "id": "fruit_011",
+      "name": "Guava"
+    },
+    {
+      "id": "fruit_012",
+      "name": "Pomegranate"
+    },
+    {
+      "id": "fruit_013",
+      "name": "Cherry"
+    },
+    {
+      "id": "fruit_014",
+      "name": "Peach"
+    },
+    {
+      "id": "fruit_015",
+      "name": "Plum"
+    },
+    {
+      "id": "fruit_016",
+      "name": "Lychee"
+    },
+    {
+      "id": "fruit_017",
+      "name": "Dragon Fruit"
+    },
+    {
+      "id": "fruit_018",
+      "name": "Jackfruit"
+    },
+    {
+      "id": "fruit_019",
+      "name": "Blueberry"
+    },
+    {
+      "id": "fruit_020",
+      "name": "Avocado"
+    },
+    {
+      "id": "fruit_021",
+      "name": "Blackberry"
+    },
+    {
+      "id": "fruit_022",
+      "name": "Raspberry"
+    },
+    {
+      "id": "fruit_023",
+      "name": "Coconut"
+    },
+    {
+      "id": "fruit_024",
+      "name": "Fig"
+    },
+    {
+      "id": "fruit_025",
+      "name": "Date"
+    },
+    {
+      "id": "fruit_026",
+      "name": "Apricot"
+    },
+    {
+      "id": "fruit_027",
+      "name": "Cantaloupe"
+    },
+    {
+      "id": "fruit_028",
+      "name": "Honeydew"
+    },
+    {
+      "id": "fruit_029",
+      "name": "Passion Fruit"
+    },
+    {
+      "id": "fruit_030",
+      "name": "Starfruit"
+    },
+    {
+      "id": "fruit_031",
+      "name": "Persimmon"
+    },
+    {
+      "id": "fruit_032",
+      "name": "Mulberry"
+    },
+    {
+      "id": "fruit_033",
+      "name": "Cranberry"
+    },
+    {
+      "id": "fruit_034",
+      "name": "Gooseberry"
+    },
+    {
+      "id": "fruit_035",
+      "name": "Tangerine"
+    },
+    {
+      "id": "fruit_036",
+      "name": "Clementine"
+    },
+    {
+      "id": "fruit_037",
+      "name": "Ugli Fruit"
+    },
+    {
+      "id": "fruit_038",
+      "name": "Durian"
+    },
+    {
+      "id": "fruit_039",
+      "name": "Rambutan"
+    },
+    {
+      "id": "fruit_040",
+      "name": "Longan"
+    },
+    {
+      "id": "fruit_041",
+      "name": "Sapodilla"
+    },
+    {
+      "id": "fruit_042",
+      "name": "Custard Apple"
+    },
+    {
+      "id": "fruit_043",
+      "name": "Soursop"
+    },
+    {
+      "id": "fruit_044",
+      "name": "Breadfruit"
+    },
+    {
+      "id": "fruit_045",
+      "name": "Mangosteen"
+    },
+    {
+      "id": "fruit_046",
+      "name": "Nectarine"
+    },
+    {
+      "id": "fruit_047",
+      "name": "Quince"
+    },
+    {
+      "id": "fruit_048",
+      "name": "Pomelo"
+    },
+    {
+      "id": "fruit_049",
+      "name": "Kumquat"
+    },
+    {
+      "id": "fruit_050",
+      "name": "Bilberry"
+    },
+    {
+      "id": "fruit_051",
+      "name": "Salak"
+    },
+    {
+      "id": "fruit_052",
+      "name": "Jujube"
+    },
+    {
+      "id": "fruit_053",
+      "name": "Tamarind"
+    },
+    {
+      "id": "fruit_054",
+      "name": "Bael"
+    },
+    {
+      "id": "fruit_055",
+      "name": "Wood Apple"
+    },
+    {
+      "id": "fruit_056",
+      "name": "Rose Apple"
+    },
+    {
+      "id": "fruit_057",
+      "name": "Amla"
+    },
+    {
+      "id": "fruit_058",
+      "name": "Loquat"
+    },
+    {
+      "id": "fruit_059",
+      "name": "Miracle Fruit"
+    },
+    {
+      "id": "fruit_060",
+      "name": "Feijoa"
+    }
   ]
 }

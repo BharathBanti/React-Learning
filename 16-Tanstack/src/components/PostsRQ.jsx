@@ -1,8 +1,28 @@
-import { useQuery } from '@tanstack/react-query';
+import { useQuery, useMutation, useQueryClient } from '@tanstack/react-query';
 import axios from 'axios';
+import { useState } from 'react';
 import Post from './Post';
 
 function PostsRQ() {
+  const [title, setTitle] = useState('');
+  const [content, setContent] = useState('');
+  const queryClient = useQueryClient();
+
+  // POST method
+  function addPost(post) {
+    return axios.post('http://localhost:3001/posts', post);
+  }
+
+  function handlePost(e) {
+    e.preventDefault();
+
+    const post = { title, content };
+    mutate(post);
+    // addPost(post);
+    setTitle('');
+    setContent('');
+  }
+
   // query key is ["posts"] in 'http://localhost:3001/posts'
   // query key is ["posts", post.id] in 'http://localhost:3001/posts/1'
   // query key is ["posts", post.id, "comments"] in 'http://localhost:3001/posts/1/comments'
@@ -12,9 +32,21 @@ function PostsRQ() {
       return axios.get('http://localhost:3001/posts');
     },
     // staleTime: 3000,
-    refetchInterval: 1000,
-    refetchIntervalInBackground: true,
     enabled: false,
+  });
+
+  const { mutate } = useMutation({
+    mutationFn: addPost,
+    onSuccess: (newData) => {
+      // queryClient.invalidateQueries({ queryKey: ['posts'] });
+      queryClient.setQueriesData(['posts'], (oldQueryData => {
+        if (!oldQueryData) return oldQueryData;
+        return {
+          ...oldQueryData,
+          data: [...oldQueryData, newData.data]
+        }
+      }));
+    }
   });
 
   if (isLoading) {
@@ -27,9 +59,25 @@ function PostsRQ() {
 
   return (
     <div className="posts-list">
+      <input
+        type="text"
+        placeholder="Enter the title"
+        onChange={(e) => setTitle(e.target.value)}
+        value={title}
+      />
+      <input
+        type="text"
+        placeholder="Enter the content"
+        onChange={(e) => setContent(e.target.value)}
+        value={content}
+      />
+      <button onClick={handlePost} type="submit">
+        Post
+      </button>
+      <br />
       <button onClick={refetch}>Fetch Posts</button>
       {data?.data.map((post) => (
-        <Post post={post} />
+        <Post key={post.id} post={post} />
       ))}
     </div>
   );
